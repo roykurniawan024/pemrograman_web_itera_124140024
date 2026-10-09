@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini POS - Kasir Sederhana</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="terminal-container">
+        <header class="header">
+            <div class="title-section">
+                <h1>MINI POS // KANTIN ITERA </h1>
+            </div>
+            <div class="status-section">
+                <span class="online-status">ONLINE [<span class="dot">●</span>]</span>
+                <span class="clock" id="clock">00:00:00</span>
+            </div>
+        </header>
+
+        <div class="grid-container">
+            <div class="panel input-panel">
+                <div class="panel-header">
+                    <h2>01 // INPUT BARANG</h2>
+                </div>
+                <form id="form-barang">
+                    <div class="input-group">
+                        <label for="nama">[NAMA BARANG]</label>
+                        <input type="text" id="nama" placeholder="Contoh: Buku Tulis">
+                        <span id="err-nama" class="error-msg"></span>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="harga">[HARGA SATUAN]</label>
+                        <input type="number" id="harga" placeholder="Harga Satuan (Rp)">
+                        <span id="err-harga" class="error-msg"></span>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="qty">[JUMLAH]</label>
+                        <input type="number" id="qty" placeholder="Jumlah (Qty)">
+                        <span id="err-qty" class="error-msg"></span>
+                    </div>
+
+                    <button type="submit" class="btn btn-cyan">
+                        [ TAMBAH KE KERANJANG ]
+                    </button>
+                </form>
+            </div>
+
+            <div class="panel cart-panel">
+                <div class="panel-header">
+                    <h2>02 // KERANJANG BELANJA [ <span id="item-count">0</span> ITEM ]</h2>
+                </div>
+                
+                <div class="table-container">
+                    <table id="cart-table">
+                        <thead>
+                            <tr>
+                                <th>NO</th>
+                                <th>NAMA BARANG</th>
+                                <th>HARGA SATUAN</th>
+                                <th>QTY</th>
+                                <th>SUBTOTAL</th>
+                                <th>AKSI</th>
+                            </tr>
+                        </thead>
+                        <tbody id="cart-body"></tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="bottom-grid">
+                <div class="receipt">
+                    <div class="receipt-row">
+                        <span>TOTAL BELANJA:</span>
+                        <span id="total-belanja">0</span>
+                    </div>
+                    <div class="receipt-row">
+                        <span>DISKON (10%):</span>
+                        <span id="diskon">0</span>
+                    </div>
+                    <div class="receipt-row total">
+                        <span>TOTAL AKHIR:</span>
+                        <span>Rp <span id="total-akhir">0</span></span>
+                    </div>
+                </div>
+
+                <div class="panel payment-panel">
+                    <div class="panel-header">
+                        <h2>03 // TRANSAKSI</h2>
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="uang-bayar">UANG BAYAR (Rp)</label>
+                        <input type="number" id="uang-bayar" placeholder="UANG BAYAR (Rp)">
+                    </div>
+
+                    <div class="change-info">
+                        KEMBALIAN: <span id="kembalian">-</span>
+                    </div>
+
+                    <button id="btn-reset" class="btn btn-red">
+                        [ TRANSAKSI BARU / RESET ]
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
