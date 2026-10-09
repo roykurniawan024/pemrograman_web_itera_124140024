@@ -26,7 +26,6 @@ Mini POS (Point of Sale) adalah aplikasi kasir berbasis web sederhana yang diban
 - [x] Tombol reset transaksi baru.
 
 ## Tangkapan Layar (Screenshot)
-*Tambahkan minimal 3 file screenshot Anda ke dalam folder, dan panggil di sini:*
 1. **Tampilan Form Input Utama:** ![Form Utama](utama.png)
 2. **Tampilan Validasi Error:** ![Validasi Error](error.png)
 3. **Tampilan Hasil Perhitungan & Tabel:** ![Hasil Perhitungan](hasil.png)
