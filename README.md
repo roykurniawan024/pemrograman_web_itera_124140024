@@ -27,9 +27,9 @@ Mini POS (Point of Sale) adalah aplikasi kasir berbasis web sederhana yang diban
 
 ## Tangkapan Layar (Screenshot)
 *Tambahkan minimal 3 file screenshot Anda ke dalam folder, dan panggil di sini:*
-1. **Tampilan Form Input Utama:** `[Form Utama](utama.png)`
-2. **Tampilan Validasi Error:** `[Validasi Error](error.png)`
-3. **Tampilan Hasil Perhitungan & Tabel:** `[Hasil Perhitungan](hasil.png)`
+1. **Tampilan Form Input Utama:** `![Form Utama](utama.png)`
+2. **Tampilan Validasi Error:** `![Validasi Error](error.png)`
+3. **Tampilan Hasil Perhitungan & Tabel:** `![Hasil Perhitungan](hasil.png)`
 
 ## Penjelasan Teknis Singkat
 Logika JavaScript utama dibangun menggunakan penanganan *Event Listener* pada objek formulir dan *input tag*. Validasi diatur dengan *conditional statement* (`if-else`), yang mengeksekusi peringatan jika data berada di luar batasan persyaratan. Algoritma keuangan dieksekusi dengan fungsi array `forEach()` untuk mendapatkan subtotal iteratif dan mengurangi diskon. Fitur serialisasi menggunakan instruksi `JSON.stringify()` untuk mengubah format _array of objects_ milik daftar barang menjadi string JSON sebelum diinjeksikan ke memori _browser_ via `localStorage.setItem`, dan `JSON.parse()` saat menarik kembali _state_ awal memori aplikasi.
