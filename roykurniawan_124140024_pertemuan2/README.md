@@ -51,5 +51,5 @@ roykurniawan_124140024_pertemuan2/
 
 ## Screenshot Aplikasi
 
-### 1. Tampilan Utama Dashboard
+### Tampilan Utama Dashboard
 ![Tampilan Utama](personalDashboard.png)
