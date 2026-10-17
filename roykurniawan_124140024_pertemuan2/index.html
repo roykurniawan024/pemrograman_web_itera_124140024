@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Personal Dashboard - Roy Kurniawan</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="navbar">
+    <div class="container navbar-content">
+      <div>
+        <h1>Personal Dashboard</h1>
+        <p class="subtitle">Halo Roy Kurniawan</p>
+      </div>
+      <div class="time-box">
+        <div id="clockText" class="clock">00:00:00</div>
+        <div id="dateText" class="date">-</div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="info-row">
+      <div class="card weather-card">
+        <div class="card-label">Cuaca ITERA</div>
+        <div class="weather-main">
+          <span id="weatherTemp" class="temp">--°C</span>
+          <div class="weather-detail">
+            <div id="weatherCond">Memuat...</div>
+            <div id="weatherWind" class="muted">Angin: -</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card quote-card">
+        <div class="quote-header">
+          <span class="card-label">Kutipan Hari Ini</span>
+          <button type="button" id="refreshQuoteBtn" class="btn-link">Ganti Kutipan</button>
+        </div>
+        <p id="quoteText" class="quote-text">"Memuat kutipan..."</p>
+        <p id="quoteAuthor" class="quote-author">-</p>
+      </div>
+    </section>
+
+    <section class="dashboard-grid">
+      <aside class="card form-card">
+        <h2 id="formTitle">Tambah Tugas Kuliah</h2>
+        <form id="taskForm">
+          <div class="form-group">
+            <label for="titleInput">Nama Tugas</label>
+            <input type="text" id="titleInput" placeholder="Contoh: Laporan Praktikum PAW" required>
+          </div>
+
+          <div class="form-group">
+            <label for="courseInput">Mata Kuliah</label>
+            <select id="courseInput">
+              <option value="Pengembangan Aplikasi Web">Pengembangan Aplikasi Web</option>
+              <option value="Pemrograman Berorientasi Objek">Pengembangan Aplikasi Mobile</option>
+              <option value="Basis Data">Sistem Informasi</option>
+              <option value="Inteligensi Buatan">Inteligensi Buatan</option>
+              <option value="Jaringan Komputer">Jaringan Komputer</option>
+              <option value="Metodologi Penelitian">Metodologi Penelitian</option>
+            </select>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="priorityInput">Prioritas</label>
+              <select id="priorityInput">
+                <option value="Rendah">Rendah</option>
+                <option value="Sedang" selected>Sedang</option>
+                <option value="Tinggi">Tinggi</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="deadlineInput">Deadline</label>
+              <input type="date" id="deadlineInput" required>
+            </div>
+          </div>
+
+          <div class="form-buttons">
+            <button type="submit" id="submitBtn" class="btn-primary">Tambah Tugas</button>
+            <button type="button" id="cancelEditBtn" class="btn-secondary hidden">Batal</button>
+          </div>
+        </form>
+      </aside>
+
+      <div class="card content-card">
+        <div class="content-header">
+          <h2>Daftar Tugas</h2>
+          <div class="stats-inline">
+            <span>Total: <strong id="totalCount">0</strong></span>
+            <span>Belum: <strong id="pendingCount">0</strong></span>
+            <span>Selesai: <strong id="doneCount">0</strong></span>
+          </div>
+        </div>
+
+        <div class="filter-bar">
+          <input type="text" id="searchInput" placeholder="Cari tugas atau mata kuliah...">
+          <select id="filterSelect">
+            <option value="all">Semua Tugas</option>
+            <option value="pending">Belum Selesai</option>
+            <option value="completed">Sudah Selesai</option>
+          </select>
+        </div>
+
+        <div id="taskList" class="task-list"></div>
+      </div>
+    </section>
+  </main>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
