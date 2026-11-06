@@ -1,20 +1,17 @@
-# Dictionary awal daftar kontak
-daftar_kontak = {
-    "Roy": "081234567890",
-    "Budi": "082198765432",
-    "Siti": "085311223344",
+kontak = {
+    "Roy": "081277889900",
+    "Dimas": "085211334455",
+    "Nabila": "089655443322"
 }
 
-# 1. Menambahkan kontak baru
-daftar_kontak["Andi"] = "081355667788"
-print("Kontak Andi berhasil ditambahkan.")
+# tambah kontak baru
+kontak["Rizky"] = "081366778899"
 
-# 2. Mencari nomor telepon menggunakan .get()
-print("\n--- PENCARIAN KONTAK ---")
-print("Nomor Budi :", daftar_kontak.get("Budi", "Kontak tidak ditemukan"))
-print("Nomor Dewi :", daftar_kontak.get("Dewi", "Kontak tidak ditemukan"))
+# cari kontak
+print("Nomor Dimas:", kontak.get("Dimas", "Tidak ditemukan"))
+print("Nomor Fajar:", kontak.get("Fajar", "Tidak ditemukan"))
 
-# 3. Menampilkan seluruh kontak yang tersimpan
-print("\n--- DAFTAR SELURUH KONTAK ---")
-for nama, nomor in daftar_kontak.items():
-  print(f"- {nama}: {nomor}")
+# tampilkan semua kontak
+print("Daftar Kontak:")
+for nama, nomor in kontak.items():
+    print(f"- {nama}: {nomor}")

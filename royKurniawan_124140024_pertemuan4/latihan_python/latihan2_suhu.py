@@ -1,14 +1,7 @@
-print("--- KALKULATOR KONVERSI SUHU ---")
+c = float(input("Masukkan suhu Celcius: "))
 
-# Menerima input suhu Celcius dan mengubahnya ke float
-celcius = float(input("Masukkan suhu dalam derajat Celcius: "))
+f = (c * 9 / 5) + 32
+k = c + 273.15
 
-# Menghitung konversi ke Fahrenheit dan Kelvin
-fahrenheit = (celcius * 9 / 5) + 32
-kelvin = celcius + 273.15
-
-# Menampilkan hasil konversi dengan 2 angka di belakang koma
-print("\n--- HASIL KONVERSI ---")
-print(f"Celcius    : {celcius:.2f} C")
-print(f"Fahrenheit : {fahrenheit:.2f} F")
-print(f"Kelvin     : {kelvin:.2f} K")
+print(f"Fahrenheit: {f:.2f} F")
+print(f"Kelvin: {k:.2f} K")

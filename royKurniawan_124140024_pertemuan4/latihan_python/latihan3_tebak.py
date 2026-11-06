@@ -1,14 +1,11 @@
-angka_rahasia = 7
-
-print("--- GAME TEBAK ANGKA RAHASIA ---")
+angka_rahasia = 12
 
 while True:
-  tebakan = int(input("Masukkan tebakan angka: "))
-
-  if tebakan < angka_rahasia:
-    print("Terlalu kecil!")
-  elif tebakan > angka_rahasia:
-    print("Terlalu besar!")
-  else:
-    print("Selamat, tebakan benar!")
-    break
+    tebakan = int(input("Tebak angka rahasia: "))
+    if tebakan < angka_rahasia:
+        print("Terlalu kecil!")
+    elif tebakan > angka_rahasia:
+        print("Terlalu besar!")
+    else:
+        print("Selamat, tebakan benar!")
+        break
