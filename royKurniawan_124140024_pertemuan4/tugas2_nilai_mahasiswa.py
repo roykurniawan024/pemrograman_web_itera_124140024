@@ -1,96 +1,45 @@
-# 1. Menghitung nilai akhir dan menentukan grade
-def hitung_nilai_akhir(uts: float, uas: float, tugas: float) -> float:
-  """Menghitung nilai akhir berdasarkan bobot 30% UTS, 40% UAS, dan 30% Tugas."""
-  nilai_akhir = (0.30 * uts) + (0.40 * uas) + (0.30 * tugas)
-  return nilai_akhir
+def hitung_nilai_akhir(uts, uas, tugas):
+    """Menghitung nilai akhir mahasiswa"""
+    return (0.30 * uts) + (0.40 * uas) + (0.30 * tugas)
 
-def tentukan_grade(nilai_akhir: float) -> str:
-  """Menentukan grade nilai mahasiswa dari A sampai E."""
-  if nilai_akhir >= 80:
-    return "A"
-  elif nilai_akhir >= 70:
-    return "B"
-  elif nilai_akhir >= 60:
-    return "C"
-  elif nilai_akhir >= 50:
-    return "D"
-  else:
-    return "E"
+def tentukan_grade(nilai):
+    """Menentukan grade nilai A sampai E"""
+    if nilai >= 80:
+        return "A"
+    elif nilai >= 70:
+        return "B"
+    elif nilai >= 60:
+        return "C"
+    elif nilai >= 50:
+        return "D"
+    else:
+        return "E"
 
-# 2. Membuat list yang memuat 5 dictionary data mahasiswa
-data_mahasiswa = [
-    {
-        "nama": "Roy Kurniawan",
-        "nim": "124140024",
-        "nilai_uts": 85,
-        "nilai_uas": 90,
-        "nilai_tugas": 88,
-    },
-    {
-        "nama": "Ahmad Fahmi Faizi",
-        "nim": "124140001",
-        "nilai_uts": 75,
-        "nilai_uas": 78,
-        "nilai_tugas": 80,
-    },
-    {
-        "nama": "Jepri Triyanto",
-        "nim": "124140002",
-        "nilai_uts": 65,
-        "nilai_uas": 60,
-        "nilai_tugas": 70,
-    },
-    {
-        "nama": "Feri Sugiyanto",
-        "nim": "124140003",
-        "nilai_uts": 55,
-        "nilai_uas": 50,
-        "nilai_tugas": 60,
-    },
-    {
-        "nama": "Latifatul Karomah",
-        "nim": "124140004",
-        "nilai_uts": 40,
-        "nilai_uas": 45,
-        "nilai_tugas": 50,
-    },
+mahasiswa = [
+    {"nama": "Roy Kurniawan", "nim": "124140024", "nilai_uts": 84, "nilai_uas": 88, "nilai_tugas": 90},
+    {"nama": "Latifatul Karomah", "nim": "124140015", "nilai_uts": 76, "nilai_uas": 72, "nilai_tugas": 80},
+    {"nama": "Dimas Saputra", "nim": "124140031", "nilai_uts": 62, "nilai_uas": 68, "nilai_tugas": 65},
+    {"nama": "Nabila Putri", "nim": "124140042", "nilai_uts": 54, "nilai_uas": 58, "nilai_tugas": 55},
+    {"nama": "Rizky Ramadhan", "nim": "124140058", "nilai_uts": 45, "nilai_uas": 40, "nilai_tugas": 50}
 ]
 
-# 3. Menghitung nilai akhir dan grade mahasiswa
-for mhs in data_mahasiswa:
-  akhir = hitung_nilai_akhir(
-      mhs["nilai_uts"], mhs["nilai_uas"], mhs["nilai_tugas"]
-  )
-  mhs["nilai_akhir"] = akhir
-  mhs["grade"] = tentukan_grade(akhir)
+# hitung nilai akhir dan grade
+for mhs in mahasiswa:
+    na = hitung_nilai_akhir(mhs["nilai_uts"], mhs["nilai_uas"], mhs["nilai_tugas"])
+    mhs["nilai_akhir"] = na
+    mhs["grade"] = tentukan_grade(na)
 
-# 4. Menampilkan seluruh data mahasiswa
-print("\n--- DAFTAR NILAI MAHASISWA ---")
-print("-" * 68)
-print(
-    f"| {'No':<2} | {'Nama Mahasiswa':<18} | {'NIM':<10} | {'Nilai Akhir':<11}"
-    f" | {'Grade':<5} |"
-)
-print("-" * 68)
+# tampilkan tabel
+print("-" * 60)
+print(f"| {'Nama':<18} | {'NIM':<10} | {'Nilai Akhir':<11} | {'Grade':<5} |")
+print("-" * 60)
+for mhs in mahasiswa:
+    print(f"| {mhs['nama']:<18} | {mhs['nim']:<10} | {mhs['nilai_akhir']:<11.2f} | {mhs['grade']:<5} |")
+print("-" * 60)
 
-for nomor, mhs in enumerate(data_mahasiswa, start=1):
-  print(
-      f"| {nomor:<2} | {mhs['nama']:<18} | {mhs['nim']:<10} |"
-      f" {mhs['nilai_akhir']:<11.2f} | {mhs['grade']:<5} |"
-  )
+# cari nilai tertinggi dan terendah
+tertinggi = max(mahasiswa, key=lambda x: x["nilai_akhir"])
+terendah = min(mahasiswa, key=lambda x: x["nilai_akhir"])
 
-print("-" * 68)
-
-# 5. Mencari mahasiswa dengan nilai akhir tertinggi dan terendah
-mhs_tertinggi = max(data_mahasiswa, key=lambda m: m["nilai_akhir"])
-mhs_terendah = min(data_mahasiswa, key=lambda m: m["nilai_akhir"])
-
-print("\n--- INFORMASI NILAI TERTINGGI & TERENDAH ---")
-print(
-    f"Nilai Tertinggi : {mhs_tertinggi['nama']} ({mhs_tertinggi['nim']}) -"
-    f" {mhs_tertinggi['nilai_akhir']:.2f} (Grade {mhs_tertinggi['grade']})"
-)
-print(
-    f"Nilai Terendah  : {mhs_terendah['nama']} ({mhs_terendah['nim']}) -"
-    f" {mhs_terendah['nilai_akhir']:.2f} (Grade {mhs_terendah['grade']})"
-)
+print(f"Nilai tertinggi: {tertinggi['nama']} ({tertinggi['nim']}) - {tertinggi['nilai_akhir']:.2f} ({tertinggi['grade']})")
+print(f"Nilai terendah: {terendah['nama']} ({terendah['nim']}) - {terendah['nilai_akhir']:.2f} ({terendah['grade']})")
