@@ -18,9 +18,9 @@ def tentukan_grade(nilai):
 mahasiswa = [
     {"nama": "Roy Kurniawan", "nim": "124140024", "nilai_uts": 84, "nilai_uas": 88, "nilai_tugas": 90},
     {"nama": "Latifatul Karomah", "nim": "124140015", "nilai_uts": 76, "nilai_uas": 72, "nilai_tugas": 80},
-    {"nama": "Dimas Saputra", "nim": "124140031", "nilai_uts": 62, "nilai_uas": 68, "nilai_tugas": 65},
-    {"nama": "Nabila Putri", "nim": "124140042", "nilai_uts": 54, "nilai_uas": 58, "nilai_tugas": 55},
-    {"nama": "Rizky Ramadhan", "nim": "124140058", "nilai_uts": 45, "nilai_uas": 40, "nilai_tugas": 50}
+    {"nama": "Dimas Japran", "nim": "124140031", "nilai_uts": 62, "nilai_uas": 68, "nilai_tugas": 65},
+    {"nama": "Dwi Putri", "nim": "124140042", "nilai_uts": 54, "nilai_uas": 58, "nilai_tugas": 55},
+    {"nama": "Rizky Febian", "nim": "124140058", "nilai_uts": 45, "nilai_uas": 40, "nilai_tugas": 50}
 ]
 
 # hitung nilai akhir dan grade

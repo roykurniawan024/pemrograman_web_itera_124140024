@@ -1,11 +1,11 @@
 kontak = {
-    "Roy": "081277889900",
-    "Dimas": "085211334455",
-    "Nabila": "089655443322"
+    "Roy": "08127891011",
+    "Dimas": "085212345678",
+    "Nabila": "089654321234"
 }
 
 # tambah kontak baru
-kontak["Rizky"] = "081366778899"
+kontak["Rizky"] = "081367891012"
 
 # cari kontak
 print("Nomor Dimas:", kontak.get("Dimas", "Tidak ditemukan"))

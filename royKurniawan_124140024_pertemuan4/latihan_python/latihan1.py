@@ -1,7 +1,7 @@
 nama = "Roy Kurniawan"
 nim = "124140024"
 angkatan = 2024
-minat = "Web Development"
+minat = "Software Development"
 
 print(nama, nim, angkatan, minat, sep=" | ")
 

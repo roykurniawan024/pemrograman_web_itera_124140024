@@ -16,3 +16,15 @@ NIM : 124140024
 python tugas1_bmi.py
 python tugas2_nilai_mahasiswa.py
 python main.py
+```
+
+## Screenshot Hasil Eksekusi
+
+- **Tugas 1**  
+![Tugas 1](screenshot/tugas1.png)
+
+- **Tugas 2**  
+![Tugas 2](screenshot/tugas2.png)
+
+- **Tugas 3**  
+![Tugas 3](screenshot/tugas3.png)

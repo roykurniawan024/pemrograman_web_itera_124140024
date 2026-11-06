@@ -1,4 +1,4 @@
-angka_rahasia = 12
+angka_rahasia = 7
 
 while True:
     tebakan = int(input("Tebak angka rahasia: "))
