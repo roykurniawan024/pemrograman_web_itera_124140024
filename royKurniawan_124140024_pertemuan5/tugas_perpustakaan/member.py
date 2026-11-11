@@ -1,6 +1,5 @@
 from library_item import LibraryItem
 
-
 # Class untuk merepresentasikan anggota perpustakaan
 class Member:
     def __init__(self, id_member: str, nama: str):

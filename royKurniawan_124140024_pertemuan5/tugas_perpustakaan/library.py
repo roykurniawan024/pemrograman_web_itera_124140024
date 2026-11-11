@@ -1,6 +1,5 @@
 from library_item import LibraryItem
 
-
 # Class untuk menyimpan dan mengelola koleksi item perpustakaan
 class Library:
     def __init__(self, nama_perpustakaan: str):

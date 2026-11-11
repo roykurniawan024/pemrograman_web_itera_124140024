@@ -2,14 +2,13 @@ from library_item import Book, Magazine
 from member import Member
 from library import Library
 
-
 # Program utama untuk menguji fungsionalitas sistem perpustakaan
 if __name__ == "__main__":
     perpus = Library("Perpustakaan ITERA")
 
     # 1. Membuat objek Book dan Magazine
-    buku1 = Book("B001", "Pemrograman Web Python", 2024, "Ahmad Fadhil", 320)
-    buku2 = Book("B002", "Struktur Data dan Algoritma", 2023, "Budi Santoso", 410)
+    buku1 = Book("B001", "Pemrograman Berorientasi Objek", 2024, "Ahmad Mirzani", 320)
+    buku2 = Book("B002", "Algoritma dan Struktur Data", 2023, "Farhan Fadillah", 410)
     majalah1 = Magazine("M001", "InfoKomputer Edisi AI", 2025, 12, "Gramedia Majalah")
     majalah2 = Magazine("M002", "National Geographic Sains", 2024, 8, "NatGeo Indonesia")
 

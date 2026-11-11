@@ -1,6 +1,5 @@
 from abc import ABC, abstractmethod
 
-
 # Abstract class dasar untuk semua item di perpustakaan
 class LibraryItem(ABC):
     def __init__(self, id_item: str, judul: str, tahun: int):
@@ -35,7 +34,6 @@ class LibraryItem(ABC):
         status = "Dipinjam" if self.__is_dipinjam else "Tersedia"
         return f"[{self._id_item}] {self._judul} ({self._tahun}) - {status}"
 
-
 # Subclass untuk item bertipe Buku
 class Book(LibraryItem):
     def __init__(self, id_item: str, judul: str, tahun: int, penulis: str, jumlah_halaman: int):
@@ -53,7 +51,6 @@ class Book(LibraryItem):
         if hari_terlambat > 0:
             return hari_terlambat * 2000.0
         return 0.0
-
 
 # Subclass untuk item bertipe Majalah
 class Magazine(LibraryItem):
