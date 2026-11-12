@@ -3,7 +3,7 @@
 ## Identitas Mahasiswa
 - **Nama Lengkap** : Roy Kurniawan
 - **NIM** : 124140024
-- **Kelas Praktikum** : RA 
+- **Kelas Praktikum** : RA
 
 ## Deskripsi Program
 Program ini merupakan sistem manajemen perpustakaan sederhana berbasis Python OOP. Alur program dimulai dengan menginisialisasi objek perpustakaan (`Library`), menambahkan koleksi buku (`Book`) dan majalah (`Magazine`), menampilkan daftar item yang tersedia, mencari item berdasarkan judul atau ID, serta mensimulasikan peminjaman dan pengembalian item oleh anggota (`Member`).
@@ -24,4 +24,5 @@ Penerapan konsep OOP dalam program:
        python main.py
 
 ## Screenshot Output
-! [Screenshot Output Program](output.png)
+<img src="screenshots/output1.png" alt="Screenshot Output 1">
+<img src="screenshots/output2.png" alt="Screenshot Output 2">
